@@ -1,4 +1,4 @@
-package uint128 // import "lukechampine.com/uint128"
+package uint128
 
 import (
 	"encoding/binary"
@@ -29,6 +29,10 @@ func (u Uint128) IsZero() bool {
 // is preferred for consistency.
 func (u Uint128) Equals(v Uint128) bool {
 	return u == v
+}
+
+func (u Uint128) Low() uint64 {
+	return u.lo
 }
 
 // Equals64 returns true if u == v.
