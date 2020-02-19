@@ -35,6 +35,10 @@ func (u Uint128) Low() uint64 {
 	return u.lo
 }
 
+func (u Uint128) Hi() uint64 {
+	return u.hi
+}
+
 // Equals64 returns true if u == v.
 func (u Uint128) Equals64(v uint64) bool {
 	return u.lo == v && u.hi == 0
